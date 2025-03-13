@@ -10,7 +10,7 @@
 
         thingy.appendChild(script);
 
-        let target = document.querySelector(".product-form"); // Adjust as needed
+        let target = document.querySelector(".product-form");
         if (target) {
             target.parentNode.insertBefore(thingy, target.nextSibling);
         } else {
