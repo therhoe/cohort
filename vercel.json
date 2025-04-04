@@ -1,0 +1,31 @@
+{
+  "version": 2,
+  "builds": [
+    {
+      "src": "cohort-index.html",
+      "use": "@vercel/static"
+    },
+    {
+      "src": "cohort-styles.css",
+      "use": "@vercel/static"
+    },
+    {
+      "src": "cohort-script.js",
+      "use": "@vercel/static"
+    }
+  ],
+  "routes": [
+    {
+      "src": "/cohort-styles.css",
+      "dest": "/cohort-styles.css"
+    },
+    {
+      "src": "/cohort-script.js",
+      "dest": "/cohort-script.js"
+    },
+    {
+      "src": "/(.*)",
+      "dest": "/cohort-index.html"
+    }
+  ]
+} 
