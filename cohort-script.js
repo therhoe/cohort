@@ -48,6 +48,7 @@ document.addEventListener('DOMContentLoaded', () => {
             cameraPreview.style.display = 'block';
             recordingControls.style.display = 'flex';
             recordAnswerBtn.style.display = 'none';
+            widget.classList.add('recording');
         } catch (err) {
             console.error('Error accessing camera:', err);
             alert('Error accessing camera. Please make sure you have granted camera permissions.');
@@ -79,6 +80,7 @@ document.addEventListener('DOMContentLoaded', () => {
             recordAnswerBtn.style.display = 'block';
             startRecordingBtn.style.display = 'block';
             stopRecordingBtn.style.display = 'none';
+            widget.classList.remove('recording');
         };
 
         mediaRecorder.start();
@@ -103,6 +105,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 videoPlayer.style.display = 'block';
                 recordingControls.style.display = 'none';
                 recordAnswerBtn.style.display = 'block';
+                widget.classList.remove('recording');
             }
         }
     });
